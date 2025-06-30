@@ -7,7 +7,7 @@
 (setq doom-serif-font (font-spec :family "Input Serif" :weight 'light))
 (setq-default line-spacing 0.2)
 (setq display-line-numbers-type t)
-(setq fancy-splash-image "~/Pictures/org.png")
+(setq fancy-splash-image "~/.config/doom/org.png")
 
 ;; Support for mermaid diagrams
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
