@@ -50,4 +50,5 @@
 ;(unpin! t)
 
 (package! ob-mermaid)
-(package! org-ql)
+(package! mise)
+(package! org-super-agenda)
