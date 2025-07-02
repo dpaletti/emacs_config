@@ -11,6 +11,9 @@
 ;; Support for mermaid diagrams
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
+(setq-hook! 'gfm-mode-hook +format-with 'prettier-markdown)
+(setq-hook! 'markdown-mode-hook +format-with 'prettier-markdown)
+
 ;; Tool versioning
 (use-package! mise
   :config
@@ -27,7 +30,7 @@
     ((error line-start (file-name) ":" line ":" column ":" (id (one-or-more (not (any ":")))) ":" (message) line-end))
     :modes (markdown-mode org-mode text-mode gfm-mode)
     )
-  (add-to-list 'flycheck-checkers 'vale)
+  (add-to-list 'flycheck-checkers 'vale) ;; vale gets priority
   (flycheck-add-next-checker 'vale 'markdown-markdownlint-cli2))
 
 
